@@ -1,0 +1,134 @@
+@hostname = https://reqres.in/api/users?page=2
+
+### Request 1
+@hostname2 = https://reqres.in/api/users
+GET {{hostname}}get
+
+#####
+POST  {{hostname}}add
+content-type: application/json
+
+{
+    "id":15,
+    "fname":"pradeep",
+    "mname":"t",
+    "lname":"kadam",
+    "city":"kolhapur"
+}
+
+#######
+DELETE {{hostname}}del/1
+content-type: application/json
+
+
+
+#######
+PUT   {{hostname}}update
+content-type: application/json
+
+{
+    "id":1,
+    "fname":"pk",
+    "mname":"pk",
+    "lname":"pk",
+    "city":"kolhapur"
+}
+
+### Request 1
+GET {{hostname}}getid/44
+### Request 1
+GET {{hostname}}get/pk
+#####
+
+
+
+
+
+##################Docter#################
+@hostnamed = http://localhost:8892/api/v1/docter/
+### Request 1
+GET {{hostnamed}}get
+
+#####
+POST  {{hostnamed}}add
+content-type: application/json
+
+{
+    "id":15,
+    "fname":"dr",
+    "mname":"Bhatia",
+    "lname":"Capgemin",
+    "city":"pune"
+}
+
+#######
+DELETE {{hostnamed}}del/1
+content-type: application/json
+
+
+
+#######
+PUT   {{hostnamed}}update
+content-type: application/json
+
+{
+    "id":1,
+    "fname":"pk",
+    "mname":"pk",
+    "lname":"pk",
+    "city":"pune"
+}
+
+### Request 1
+GET {{hostnamed}}getid/44
+### Request 1
+GET {{hostnamed}}get/pk
+#####
+
+
+
+
+
+
+
+##################Docter#################
+@hostnamep = http://localhost:8892/api/v1/patient/
+### Request 1
+GET {{hostnamep}}get
+
+#####
+POST  {{hostnamed}}add
+content-type: application/json
+
+{
+    "id":15,
+    "fname":"pa",
+    "mname":"Chetan",
+    "lname":"kota",
+    "city":"pune"
+    
+}
+
+#######
+DELETE {{hostnamep}}del/1
+content-type: application/json
+
+
+
+#######
+PUT   {{hostnamep}}update
+content-type: application/json
+
+{
+    "id":1,
+    "fname":"prk",
+    "mname":"tk",
+    "lname":"kadam",
+    "city":"kolhapur"
+}
+
+### Request 1
+GET {{hostnamep}}getid/44
+### Request 1
+GET {{hostnamep}}get/prk
+####

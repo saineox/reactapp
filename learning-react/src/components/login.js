@@ -1,4 +1,6 @@
 // import React from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { GiTiredEye } from "react-icons/gi";
 import { GiEyelashes } from "react-icons/gi";
@@ -12,12 +14,24 @@ const LoginPage = () => {
     email: "gangadhar@vshesh.com",
   };
 
+  const navigate = useNavigate();
   const onLogInAction = () => {
-    alert(greetings);
+    console.log(formValue);
+    const url = "https://reqres.in/api/login";
+
+    axios
+      .post(url)
+      .then((response) => {
+        console.log("Your In");
+        navigate("/mail/inbox");
+      })
+      .catch((error) => {
+        console.log("Sorry ");
+      });
   };
 
   const [formValue, setFormValue] = useState({
-    email_id: " ",
+    email: " ",
     password: " ",
   });
 
@@ -42,13 +56,13 @@ const LoginPage = () => {
           Id : {studentInfo.id}     Name : {studentInfo.name}{" "}
         </p>
         <p> Email : {studentInfo.email} </p>
-        <p> Email : {formValue.email_id} </p>
+        <p> Email : {formValue.email} </p>
         <h3>
-          The student name is {studentInfo.email}, and he is{" "}
-          {studentInfo.email_id} years old
+          The student name is {studentInfo.email}, and he is {studentInfo.email}{" "}
+          years old
         </h3>
         {/* <h1>
-          Your email id is {formValue.email_id} and password{" "}
+          Your email id is {formValue.email} and password{" "}
           {formValue.password}
         </h1> */}
       </div>
@@ -68,7 +82,7 @@ const LoginPage = () => {
           className="align-input"
           placeholder="Please enter email id"
           onChange={OnHandleInput}
-          name="email_id"
+          name="email"
         />
       </div>
       <div className="space">
