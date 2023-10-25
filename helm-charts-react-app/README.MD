@@ -43,3 +43,18 @@ sudo apt-get install helm
     <li>Docker installed (Optional for custom images)</li>
     <li>Basic understanding of Kubernetes resources like Pod, Service, Deployment</li>
 </ul>
+
+<h3>
+How use Helm
+</h3>
+<pre><code>
+helm install react-app ./helm-charts-react-app
+helm list
+kubectl get pods -o wide
+</code></pre>
+
+<img src="https://i.imgur.com/JNGmieZ.png">
+<br>
+<img src="https://i.imgur.com/8PhvirK.png">
+<br>
+<img src="https://i.imgur.com/FbeZHww.png">
