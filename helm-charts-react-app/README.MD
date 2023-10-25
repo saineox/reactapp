@@ -48,6 +48,8 @@ sudo apt-get install helm
 How use Helm
 </h3>
 <pre><code>
+git clone https://github.com/saineox/reactapp.git
+cd reactapp
 helm install react-app ./helm-charts-react-app
 helm list
 kubectl get pods -o wide
