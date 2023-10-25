@@ -54,7 +54,7 @@ helm install react-app ./helm-charts-react-app
 helm list
 kubectl get pods -o wide
 </code></pre>
-
+<h2> this is run on 32123 <h2>
 <img src="https://i.imgur.com/JNGmieZ.png">
 <br>
 <img src="https://i.imgur.com/8PhvirK.png">
